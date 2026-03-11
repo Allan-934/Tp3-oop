@@ -161,12 +161,20 @@ public class Category // Exercice 6
 
 public class ProductId // Exercice 8
 {
+    private static int nextId = 1; // Variable statique pour générer des IDs uniques
     private int id;
     private string name;
     private double price;
     public int Id {get { return id;} }
     public string Name {get { return name;}}
     public double Price {get { return price;}}
+
+    public ProductId(string name, double price) // Constructeur par défaut
+    {
+        this.id = nextId++;
+        this.name = name;
+        this.price = price;
+    }
 
 }
 
@@ -211,7 +219,7 @@ class Program
         Console.WriteLine($"Category: {cat3.Name}, Description: {cat3.Description}"); 
 
         // Exercice 8 bis création d'un produit et affichage du produit
-        ProductId prodId1 = new ProductId() { id = 2, name = "Tablet", price = 600 }; // j'ai modifié l'Id qu iétait de 1 par 2 
+        ProductId prodId1 = new ProductId(1) { name = "Tablet", price = 600 }; // j'ai modifié l'Id qui était de 1 par 2 
         Console.WriteLine($"Product ID: {prodId1.Id}, Name: {prodId1.Name}, Price: {prodId1.Price}");
     }
 }
