@@ -211,7 +211,7 @@ class Program
         Console.WriteLine($"Category: {cat3.Name}, Description: {cat3.Description}"); 
 
         // Exercice 8 bis création d'un produit et affichage du produit
-        ProductId prodId1 = new ProductId() { id = 2, name = "Tablet", price = 600 };
+        ProductId prodId1 = new ProductId() { id = 2, name = "Tablet", price = 600 }; // j'ai modifié l'Id qu iétait de 1 par 2 
         Console.WriteLine($"Product ID: {prodId1.Id}, Name: {prodId1.Name}, Price: {prodId1.Price}");
     }
 }
